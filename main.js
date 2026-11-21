@@ -1,7 +1,7 @@
 /* Vita em Casa · animações (GSAP + ScrollTrigger + Lenis) */
 (() => {
   const root = document.documentElement;
-  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches || new URLSearchParams(location.search).has('captura');
   const hasGsap = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
@@ -73,10 +73,16 @@
   const msg = $('[data-news-msg]');
   news.addEventListener('submit', (e) => {
     e.preventDefault();
-    const input = $('input', news);
+    const input = $('input[type=email]', news);
+    const consent = $('[data-consent]');
     if (!input.checkValidity()) {
       msg.textContent = 'Indique um e-mail válido.';
       input.focus();
+      return;
+    }
+    if (consent && !consent.checked) {
+      msg.textContent = 'Para subscrever, aceite a Política de privacidade.';
+      consent.focus();
       return;
     }
     // TODO: ligar a um serviço de newsletter (Mailchimp, Brevo, FormSubmit…).

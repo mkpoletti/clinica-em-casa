@@ -8,7 +8,7 @@ Site estático (HTML, CSS e JS) da Home da Vita em Casa, implementado a partir d
 - `assets/` · imagens (WebP) e ícones (SVG) exportados do Figma
 
 ## Animações
-Entrada do hero (máscara, zoom da foto, título palavra a palavra, cartão do plano flutuando), títulos que sobem palavra a palavra, cartões em cascata, contador "+2.000", parallax nas faixas com foto, cartões de serviços empilhados (sticky), imagem dos planos abrindo como cortina, acordeão animado nas FAQs, botões magnéticos, barra de progresso e botão flutuante de chamada. Com "reduzir movimento" ativado no sistema, tudo aparece sem animação.
+Entrada do hero (máscara, zoom da foto, título palavra a palavra, cartão do plano flutuando), títulos que sobem palavra a palavra, cartões em cascata, contador "+2.000", vídeos de fundo do Figma com parallax nas faixas, cartões de serviços empilhados (sticky), imagem dos planos abrindo como cortina, acordeão animado nas FAQs, botões magnéticos, barra de progresso e botão flutuante de chamada. Com "reduzir movimento" ativado no sistema, tudo aparece sem animação.
 
 ## Ver localmente
 ```

@@ -83,6 +83,17 @@
     msg.textContent = 'A subscrição online estará disponível em breve.';
   });
 
+  // vídeos de fundo: tocam só quando visíveis; com "reduzir movimento" ficam parados no poster
+  const vids = $$('[data-video]');
+  if (reduce) vids.forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
+  else {
+    const vio = new IntersectionObserver((entries) => entries.forEach((e) => {
+      const v = e.target;
+      if (e.isIntersecting) { const pr = v.play(); if (pr) pr.catch(() => {}); } else v.pause();
+    }), { rootMargin: '200px 0px' });
+    vids.forEach((v) => vio.observe(v));
+  }
+
   if (!hasGsap || reduce) return;
 
   /* ---------- Animação ---------- */

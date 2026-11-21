@@ -1,6 +1,6 @@
-# Clínica em Casa · Home
+# Vita em Casa · Home
 
-Site estático (HTML, CSS e JS) da Home da Clínica em Casa, implementado a partir do Figma ("Home animação").
+Site estático (HTML, CSS e JS) da Home da Vita em Casa, implementado a partir do Figma ("Home animação").
 
 - `index.html` · estrutura e textos
 - `styles.css` · layout fiel ao Figma e responsivo (desktop, tablet, celular)

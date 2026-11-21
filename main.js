@@ -1,4 +1,4 @@
-/* Clínica em Casa · animações (GSAP + ScrollTrigger + Lenis) */
+/* Vita em Casa · animações (GSAP + ScrollTrigger + Lenis) */
 (() => {
   const root = document.documentElement;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
